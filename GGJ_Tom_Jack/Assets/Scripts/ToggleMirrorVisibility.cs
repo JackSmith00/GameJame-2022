@@ -5,6 +5,8 @@ using UnityEngine;
 public class ToggleMirrorVisibility : MonoBehaviour
 {
     public GameObject mirror;
+    public GameObject roomKey;
+    public GameObject mirroredKey;
 
     public Material mirrorMaterial;
     public Material foggedMaterial;
@@ -51,6 +53,14 @@ public class ToggleMirrorVisibility : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ToggleMirrorMaterial();
+                if (roomKey != null)
+                {
+                    roomKey.SetActive(true);
+                }
+                if (mirroredKey != null)
+                {
+                    mirroredKey.SetActive(true);
+                }
             }
         }
     }
