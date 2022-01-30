@@ -53,6 +53,7 @@ public class ToggleMirrorVisibility : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 ToggleMirrorMaterial();
+                GetComponent<InteractionSound>().PlayInteractionSound();
                 if (roomKey != null)
                 {
                     roomKey.SetActive(true);

@@ -11,6 +11,8 @@ public class DoorScript : MonoBehaviour
     public bool inTrigger;
     public bool isMirroredDoor = false;
 
+    private bool soundHasPlayed = false;
+
     private float rotation;
 
     private void OnTriggerEnter(Collider other)
@@ -70,6 +72,11 @@ public class DoorScript : MonoBehaviour
                 var newRot = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0.0f, rotation, 0.0f), Time.deltaTime * 200);
 
                 transform.rotation = newRot;
+                if(GetComponent<AudioSource>() != null && !soundHasPlayed)
+                {
+                    GetComponent<AudioSource>().Play();
+                    soundHasPlayed = true;
+                }
             }
             else
             {

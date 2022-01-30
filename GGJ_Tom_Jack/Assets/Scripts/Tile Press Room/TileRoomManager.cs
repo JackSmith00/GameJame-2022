@@ -7,6 +7,7 @@ public class TileRoomManager : MonoBehaviour
 
     public GameObject[] tiles;
     public int numberOfTilesInSequence;
+    public AudioSource completionSound;
 
     public GameObject[] doors;
 
@@ -37,6 +38,7 @@ public class TileRoomManager : MonoBehaviour
 
         if(progress >= numberOfTilesInSequence) // end point for room
         {
+            completionSound.Play();
             // open door
             foreach (GameObject door in doors)
             {

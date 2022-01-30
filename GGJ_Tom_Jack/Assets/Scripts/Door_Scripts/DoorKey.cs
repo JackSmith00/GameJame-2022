@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorKey : MonoBehaviour
 {
-    public bool inTrigger;
+    [HideInInspector] public bool inTrigger;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,7 +22,11 @@ public class DoorKey : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DoorScript.doorKey = true;
-                Destroy(this.gameObject);
+                if(GetComponentInParent<AudioSource>() != null)
+                {
+                    GetComponentInParent<AudioSource>().Play();
+                }
+                this.gameObject.SetActive(false);
             }
         }
     }

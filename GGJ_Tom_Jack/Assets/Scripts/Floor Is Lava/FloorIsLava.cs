@@ -20,6 +20,7 @@ public class FloorIsLava : MonoBehaviour
         {
             player.transform.position = new Vector3(-5.812823f, 0.8099499f, -10.48899f);
             reflection.transform.position = new Vector3(-5.431764f, 3.596092f, 0.2098336f);
+            GetComponent<AudioSource>().Play();
         }
     }
 }

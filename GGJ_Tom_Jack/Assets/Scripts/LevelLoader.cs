@@ -22,6 +22,7 @@ public class LevelLoader : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        GetComponent<AudioSource>().Play();
         LoadNextLevel();
     }
 

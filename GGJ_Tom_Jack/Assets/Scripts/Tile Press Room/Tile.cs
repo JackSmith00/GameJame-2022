@@ -21,6 +21,7 @@ public class Tile : MonoBehaviour
     {
         this.gameObject.GetComponent<MeshRenderer>().material = nonTargetTileMaterial;
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        GetComponent<AudioSource>().Play();
         // update manager
         roomManager.GetComponent<TileRoomManager>().registerTileCompletion();
     }
