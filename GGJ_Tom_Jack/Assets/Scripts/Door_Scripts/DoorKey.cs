@@ -6,6 +6,8 @@ public class DoorKey : MonoBehaviour
 {
     [HideInInspector] public bool inTrigger;
 
+    public GameObject mirroredKey;
+
     private void OnTriggerEnter(Collider other)
     {
         inTrigger = true;
@@ -27,6 +29,7 @@ public class DoorKey : MonoBehaviour
                     GetComponentInParent<AudioSource>().Play();
                 }
                 this.gameObject.SetActive(false);
+                mirroredKey.SetActive(false);
             }
         }
     }
@@ -35,7 +38,7 @@ public class DoorKey : MonoBehaviour
     {
         if (inTrigger)
         {
-            GUI.Box(new Rect(0, 60, 200, 25), "Press E to pick up key");
+            GUI.Box(new Rect(0, 0, 200, 25), "Press E to pick up key");
         }
     }
 }

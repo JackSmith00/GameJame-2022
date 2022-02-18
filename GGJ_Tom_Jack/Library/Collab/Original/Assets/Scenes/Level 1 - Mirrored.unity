@@ -485,7 +485,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6561671889393768895, guid: 2d678e3e202b1344d999c6e60927f9ab, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d678e3e202b1344d999c6e60927f9ab, type: 3}
 --- !u!1 &19667468
 GameObject:
@@ -4101,6 +4102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f4d29321ba0ad488bf3d7cd65724c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  close: 1
   inTrigger: 0
   isMirroredDoor: 0
 --- !u!82 &637241093
@@ -10781,7 +10783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: movementSettings.StrafeSpeed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: movementSettings.ForwardSpeed
@@ -10789,11 +10791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: movementSettings.BackwardSpeed
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: movementSettings.RunMultiplier
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
@@ -11174,7 +11176,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9874c939c5d0fa347a482389e699fd9a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.324
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -11383,9 +11385,9 @@ MonoBehaviour:
   cam: {fileID: 1742039186}
   movementSettings:
     ForwardSpeed: 4
-    BackwardSpeed: 2
-    StrafeSpeed: 2
-    RunMultiplier: 1.5
+    BackwardSpeed: 4
+    StrafeSpeed: 4
+    RunMultiplier: 1
     RunKey: 304
     JumpForce: 30
     SlopeCurveModifier:
@@ -12082,6 +12084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f4d29321ba0ad488bf3d7cd65724c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  close: 1
   inTrigger: 0
   isMirroredDoor: 1
 --- !u!65 &1862130902
@@ -13366,6 +13369,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6561671889393768895, guid: 2d678e3e202b1344d999c6e60927f9ab, type: 3}
+      propertyPath: mirroredKey
+      value: 
+      objectReference: {fileID: 1586504183}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d678e3e202b1344d999c6e60927f9ab, type: 3}
 --- !u!1 &2027759492

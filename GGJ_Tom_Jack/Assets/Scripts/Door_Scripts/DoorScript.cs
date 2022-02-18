@@ -72,7 +72,7 @@ public class DoorScript : MonoBehaviour
                 var newRot = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0.0f, rotation, 0.0f), Time.deltaTime * 200);
 
                 transform.rotation = newRot;
-                if(GetComponent<AudioSource>() != null && !soundHasPlayed)
+                if(GetComponent<AudioSource>() != null && !soundHasPlayed && GetComponent<AudioSource>().isActiveAndEnabled)
                 {
                     GetComponent<AudioSource>().Play();
                     soundHasPlayed = true;
@@ -100,11 +100,11 @@ public class DoorScript : MonoBehaviour
             {
                 if (doorKey)
                 {
-                    GUI.Box(new Rect(0, 0, 250, 25), "Press E to Open");
+                    GUI.Box(new Rect(0, 0, 200, 25), "Press E to Open");
                 }
                 else
                 {
-                    GUI.Box(new Rect(0, 0, 250, 25), "This door is locked, You need a key!!!");
+                    GUI.Box(new Rect(0, 0, 300, 25), "This door is locked, You need a key!!!");
                 }
             }
         }

@@ -13,6 +13,9 @@ public class Keypad : MonoBehaviour
     public bool doorOpened;
     public Transform DoorHinge_2;
 
+    public AudioClip completionSound;
+    private bool soundPlayed = false;
+
     void OnTriggerEnter(Collider keypad)
     {
         onTrigger = true;
@@ -30,6 +33,12 @@ public class Keypad : MonoBehaviour
         if (input == currentPassword)
         {
             doorOpened = true;
+            if(GetComponent<AudioSource>() != null && !soundPlayed)
+            {
+                GetComponent<AudioSource>().clip = completionSound;
+                GetComponent<AudioSource>().Play();
+                soundPlayed = true;
+            }
         }
         if (doorOpened)
         {

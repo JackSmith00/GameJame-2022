@@ -14,14 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Scenes/Level 1 - Mirrored.unity
-    - Assets/Scenes/Level 2 - Upside Down.unity
-    - Assets/Scripts/Floor Is Lava/FloorIsLava.cs
-    - Assets/Scripts/Floor Is Lava/FloorIsLavaTriggers.cs
-    - Assets/Scripts/Tile Press Room/Tile.cs
-    - Assets/Scripts/Tile Press Room/TileRoomManager.cs
+    - Assets/Scenes/Level 3 - Parkour.unity
+    - Assets/asset_store/Lava_Flowing_Shader/Materials/mtl_lava_simple.mat
     - 
-    m_Values: 01010101010101
+    m_Values: 010101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
